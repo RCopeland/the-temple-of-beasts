@@ -53,48 +53,39 @@ You also notice in the corner of the room, there are a few statues of knights, f
    There is a younger knight, serving as the primary battle medic. He knows about most of the types of creatures 
 that the knights have encountered so far.
 
-### A5. Prayer room
-A large stone room with make shift seats, all facing a religious icon. There are a few knights here, lost in prayer. 
-There is also an older man, dressed in robes, and appears to be leading some of the men in prayer.
-
-### A6. MAZE - random encounter table / system
-Dusty stone hallways that go on forever. Occasionally they take turns or are blocked by doors.
-Often, you come across corpses of birds, livestock, etc.
-- rumbling starts after a while - the ship preparing to leave
-
-### A7. Dining Hall
+### A5. Dining Hall
 Huge stone room, remnants of tables and chairs, was at some long time ago a grand dining room. Now 
 it is covered in battle scars and blood. Varied winged beasts circle above as a squad of knights tries in vain
 to swing their swords and jab with their spears.
 
-### A8. Armoury
+### A6. Armoury
 This room could have been an armoury in times past, evidenced by the iron shelves and the cage. However, the room is now
 half flooded and all manner of aquatic creatures are swirling in the deep water. You see three knights frantically 
 stabbing into the water with their spears.
 
-### A9. Storehouse
+### A7. Storehouse
 A gigantic room filled with shelves and smashed crates. You see gigantic beasts fighting 2 or 3 knights each. 
 The roars are deafening. 
 
-### A10. Brewery
+### A8. Brewery
   The room is covered in blood. There are knight corpses everywhere. This was a battlefield, but is one no longer. Its now
 a menagerie of beasts all fighting with each other to claim the corpses of the knights.
 There is a decorated entry to the next room, but the beasts guard it frantically. 
 
-### A11. The Antichamber 
+### A9. The Antichamber 
    Once a sacred space for devotion, this small room is now covered in glass bottles and books. Signs of experiments in 
 progress. 
 
-### A12. The Prison
+### A10. The Prison
    This room is lined with cages, in each are commoners and a few knights. In some others, are beasts.
    The knights know that they are being transmuted into beasts, and then are offered a chance to change back
     if they deliver a (any) corpse to the traveller. 
    
-### A13. The Ship
+### A11. The Ship
    This room is enclosed in metal, it seems to be part of a craft that has crashed on top of a hallway in this structure.
 On the walls there are display panels with blinking lights and moving dials.
 
-### A14. The Bridge
+
   This room contains a giant screen that displays a field of stars. You can see lines drawn to one of the dots and labelled 
 in a language you've never seen. There also appears to be a some numbers flashing and the counter is blinking red.
   On the center throne, sits an old man, who welcomes you. 
@@ -104,7 +95,7 @@ Once the battle begins, the ship will take off in 4 rounds. Whether the travelle
 party is teleported beneath the levitating ship and they watch it rise up, tearing through the earth and disappearing into the 
 sky.
 
-### A14. The Relic
+### A12. The Relic
 The door to this room is elaborately decorated in ancient patterns. Next to the door way is a plate filled with offerings,
 long ruined by time.
 At the center of the room is a pedastal, on top of which is floating a single golden ring, mounted to which is 
