@@ -22,6 +22,7 @@
 
     Navigate into your new site’s directory and start it up.
 
+<<<<<<< Updated upstream
     ```shell
     cd my-gatsby-site/
     npm run develop
@@ -52,3 +53,17 @@
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+=======
+# TODO
+
+- add tokens and notes to foundry
+- figure out how to export note/ token info from foundry
+- export map as an image, add room labels
+- rewrite the room descriptions
+- compile doc into dnd format?
+- playtest
+- make a cover
+- art for the npc portraits
+- art for the ring
+- misc art
+>>>>>>> Stashed changes
