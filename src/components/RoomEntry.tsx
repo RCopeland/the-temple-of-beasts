@@ -2,19 +2,33 @@ import React, { ReactNode } from "react";
 export const RoomEntry = ({
   roomNumber,
   title,
+  preReadAloudText,
+  postReadAloudText,
   children,
 }: {
   roomNumber: string;
   title: string;
+  preReadAloudText?: ReactNode;
+  postReadAloudText?: ReactNode;
   children: ReactNode;
 }) => {
   return (
-    <div className="m-3">
-      <h3 className="text-xl text-red-900 mb-0.5 flex items-center gap-1">
-        <span className="font-bold">{roomNumber}.</span>
-        <span className="text-lg">{title}</span>
+    <div className="">
+      <h3 className="text-xl text-blood-red font-bold mb-1 flex items-center gap-2">
+        <span className="font-bold text-black">{roomNumber}</span>
+        <span>{title}</span>
       </h3>
-      <div className="text-sm font-light mb-1 max-w-2xl">{children}</div>
+      {preReadAloudText && (
+        <div className="bg-steel text-white rounded p-4 font-light mb-2 text-sm indent-2">
+          {preReadAloudText}
+        </div>
+      )}
+      <div className="font-light mb-1 max-w-2xl indent-2">{children}</div>
+      {postReadAloudText && (
+        <div className="bg-steel text-white rounded p-4 font-light mb-2 text-sm indent-2">
+          {postReadAloudText}
+        </div>
+      )}
     </div>
   );
 };
