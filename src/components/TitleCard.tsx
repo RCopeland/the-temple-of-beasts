@@ -17,7 +17,7 @@ export const TitleCard = () => {
         <StaticImage
           className="rounded mx-28"
           alt="weird art"
-          src="../images/maps/art.jpeg"
+          src="../images/art/art.jpeg"
         />
       </div>
       <div className="col-start-4 col-span-6 row-start-3">

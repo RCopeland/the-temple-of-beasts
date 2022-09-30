@@ -1,10 +1,14 @@
 import * as React from "react";
 import type { HeadFC } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import { TitleCard } from "../components/TitleCard";
 import { RoomEntry } from "../components/RoomEntry";
 import { ModuleEntry } from "../components/ModuleEntry";
 import { Banner } from "../components/Banner";
+import { rooms } from "../../content/rooms";
+import { StaticImage } from "gatsby-plugin-image";
+import { uniqueId } from "lodash";
+import { monsters } from "../../content/monsters";
+import { Encounter } from "../components/Encounter";
 
 const IndexPage = () => {
   return (
@@ -63,73 +67,10 @@ const IndexPage = () => {
               - knights seeking their missing comrades - villagers missing -
               merchant seeking a relic
             </ModuleEntry>
-            <RoomEntry
-              roomNumber="A1"
-              title="Entrance"
-              preReadAloudText={
-                <p>
-                  A large room with stone walls and floor, open arches in the
-                  walls allow the wind to blow in, carrying with it detritus
-                  from the forest floor. Lying at the center of the room is a
-                  <span className="font-bold"> stone altar</span>.
-                </p>
-              }
-            >
-              <>
-                <p>
-                  Upon the altar are several branches with berries, assorted
-                  fruits and vegetables, a few gold coins.
-                </p>
-                <p>
-                  Locals come here to offer small trinkets or gold. A successful
-                  <span className="font-bold">
-                    &nbsp;DC10 Religion or Nature check&nbsp;
-                  </span>
-                  reveals this to be an altar to the god Silvanus, god of
-                  nature. A successful
-                  <span className="font-bold"> DC10 perception check </span>
-                  reveals scratches on the floor that indicate a
-                  <span className="font-bold"> secret door </span> on the east
-                  wall.
-                </p>
-                <p>
-                  Searching the altar reveals the mechanism that opens the door.
-                  Pushing it causes a stone slab that previously blended into
-                  the wall to swing out, revealing a dark passage to the east.
-                  After a few seconds, a rumble can be heard within the wall,
-                  and the door slowly closes, settling back into its place,
-                  blending into the wall.
-                </p>
-              </>
-            </RoomEntry>
-            <RoomEntry roomNumber="A2" title="Hidden Treasure">
-              <p>
-                Tracks surround an open chest in the middle of the room. The
-                chest is covered in elaborate carvings and magic runes, long
-                since spent their power. The chest sits on a sliding panel that
-                opens to reveal a staircase down. In order to open the sliding
-                panel, enough weight and magical power must be placed within the
-                chest and the lid closed. When the party manages to solve the
-                puzzle, a metal whirring can be heard below as the sliding panel
-                opens. Sand and dirt fall into the widening hole. Cobwebs span
-                the new opening and a dank smell of mold hits you as you stare
-                into the darkness.
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A3" title="The Barracks">
-              <p>
-                Coming up to the door, the party sees the light of a campfire,
-                which also illuminates two figures, humanoid, in full plate
-                armor. They cross their swords as you approach, blocking your
-                path. You can also smell food cooking coming from within. This
-                room is where the knights of the silver gauntlet make camp. If
-                the players can make themselves believed to be lawful or to
-                support a just cause, they are permitted entry. Entering the
-                room, you see a series of cots, most of which have an owner,
-                either sleeping up and preparing gear or weapons. Generally, the
-                knights pay you little mind, they go about their business.
-              </p>
-            </RoomEntry>
+
+            {rooms?.slice(0, 3).map((room) => {
+              return <RoomEntry key={uniqueId()} roomData={room} />;
+            })}
           </div>
 
           <div className="col-span-7 row-span-1">
@@ -140,101 +81,220 @@ const IndexPage = () => {
             />
           </div>
           <div className="col-span-3">
-            <RoomEntry roomNumber="A4" title="The Infirmary">
-              <p>
-                This room is filled with cots, the same as in area A3. However,
-                the majority of these are blood soaked and occupied by a knight
-                with some kind of serious injury. Some have been beaten
-                severely, or bitten. Some have been poisoned and burned. You
-                also notice in the corner of the room, there are a few statues
-                of knights, forever locked in a state of battle. There is a
-                younger knight, serving as the primary battle medic. He knows
-                about most of the types of creatures that the knights have
-                encountered so far.{" "}
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A5" title="Dining Hall">
-              <p>
-                Huge stone room, remnants of tables and chairs, was at some long
-                time ago a grand dining room. Now it is covered in battle scars
-                and blood. Varied winged beasts circle above as a squad of
-                knights tries in vain to swing their swords and jab with their
-                spears.{" "}
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A6" title="Armoury">
-              <p>
-                This room could have been an armoury in times past, evidenced by
-                the iron shelves and the cage. However, the room is now half
-                flooded and all manner of aquatic creatures are swirling in the
-                deep water. You see three knights frantically stabbing into the
-                water with their spears.
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A7" title="Storehouse">
-              <p>
-                A gigantic room filled with shelves and smashed crates. You see
-                gigantic beasts fighting 2 or 3 knights each. The roars are
-                deafening.
-              </p>
-            </RoomEntry>
+            {rooms?.slice(3, 7).map((room) => {
+              return <RoomEntry key={uniqueId()} roomData={room} />;
+            })}
           </div>
           <div className="col-span-4">
-            <RoomEntry roomNumber="A8" title="Brewery">
-              <p>
-                The room is covered in blood. There are knight corpses
-                everywhere. This was a battlefield, but is one no longer. Its
-                now a menagerie of beasts all fighting with each other to claim
-                the corpses of the knights. There is a decorated entry to the
-                next room, but the beasts guard it frantically.
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A9" title="The Antichamber">
-              <p>
-                Once a sacred space for devotion, this small room is now covered
-                in glass bottles and books. Signs of experiments in progress.{" "}
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A10" title="The Dungeon">
-              <p>
-                Once a sacred space for devotion, this small room is now covered
-                in glass bottles and books. Signs of experiments in progress.
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A11" title="The Prison">
-              <p>
-                This room is lined with cages, in each are commoners and a few
-                knights. In some others, are beasts. The knights know that they
-                are being transmuted into beasts, and then are offered a chance
-                to change back if they deliver a (any) corpse to the traveller.
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A12" title="The Ship">
-              <p>
-                This room is enclosed in metal, it seems to be part of a craft
-                that has crashed on top of a hallway in this structure. On the
-                walls there are display panels with blinking lights and moving
-                dials. This room contains a giant screen that displays a field
-                of stars. You can see lines drawn to one of the dots and
-                labelled in a language you've never seen. There also appears to
-                be a some numbers flashing and the counter is blinking red. In
-                the captain's chair, sits an old man, who welcomes you.
-              </p>
-            </RoomEntry>
-            <RoomEntry roomNumber="A13" title="The Relic">
-              <p>
-                The door to this room is elaborately decorated in ancient
-                patterns. Next to the door way is a plate filled with offerings,
-                long ruined by time. At the center of the room is a pedastal, on
-                top of which is floating a single golden ring, mounted to which
-                is a small black gem in the shape of a goat's head. - ring of
-                the cloven hoof - magic item that changes the villager into a
-                random thing - relic inspired worship in a primitive cult who
-                built the temple. The power attracted the traveller. Once the
-                relic is removed, the party must escape the temple in 10 rounds
-                before it collapses, killing them.
-              </p>
-            </RoomEntry>
+            <div className="col-span-3">
+              {rooms?.slice(7, rooms.length).map((room) => {
+                return <RoomEntry key={uniqueId()} roomData={room} />;
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-cloud w-full">
+        <div className="max-w-screen-desktop m-auto">
+          <div className="grid grid-cols-12 gap-4 mt-32 pt-16">
+            <div className="col-span-6">
+              <Encounter
+                encounterData={{
+                  name: "Aquatic Creatures",
+                  enemies: [
+                    { monster: monsters.octopus, count: 3 },
+                    { monster: monsters.giantCrab, count: 2 },
+                    { monster: monsters.reefShark, count: 3 },
+                    { monster: monsters.killerWhale, count: 1 },
+                  ],
+                  tactics: (
+                    <>
+                      <p>
+                        All creatures will fight to the death, unless
+                        they&apos;re able to steal a corpse (friend or foe) and
+                        escape with it.
+                      </p>
+                      <p>
+                        The Killer Whale and Reef Sharks will focus on the
+                        nearest enemy with their bites. The sharks will prefer
+                        pack tactics advantaged attacks over non, but will
+                        always attack the closest despite this.
+                      </p>
+                      <p>
+                        The Giant Crabs will try to grapple and drag PCs toward
+                        the bigger creatures, hoping to get them killed and make
+                        off with the body. If the PC is too strong to grapple,
+                        the crab will attack instead.
+                      </p>
+                      <p>
+                        The octopi float around helping to distract PCs, they
+                        will also use Ink cloud when they&apos;re able and will
+                        do so to disable PCs or to flee.
+                      </p>
+                    </>
+                  ),
+                }}
+              />
+            </div>
+            <div className="col-span-6">
+              <Encounter
+                encounterData={{
+                  name: "Dinosaurs",
+                  enemies: [
+                    { monster: monsters.ankylosaurus, count: 1 },
+                    { monster: monsters.allosaurus, count: 1 },
+                    { monster: monsters.pteranodon, count: 1 },
+                    { monster: monsters.swarmofinsects, count: 3 },
+                  ],
+                  tactics: (
+                    <>
+                      <p>
+                        All creatures will fight to the death, unless
+                        they&apos;re able to steal a corpse (friend or foe) and
+                        escape with it.
+                      </p>
+                      <p>
+                        The Ankylosaurus will tail attack the nearest enemy. The
+                        Allosaurus will attempt to pounce the weakest looking
+                        enemy. The pteranodon will swoop in to make attacks,
+                        looking for distracted enemies. The swarms move randomly
+                        from enemy to enemy.
+                      </p>
+                    </>
+                  ),
+                }}
+              />
+            </div>
+            <div className="col-span-6">
+              <Encounter
+                encounterData={{
+                  name: "Winged Beasts",
+                  enemies: [
+                    { monster: monsters.eagle, count: 3 },
+                    { monster: monsters.bloodhawk, count: 3 },
+                    { monster: monsters.giantbat, count: 2 },
+                    { monster: monsters.griffon, count: 2 },
+                  ],
+                  tactics: (
+                    <>
+                      <p>
+                        All creatures will fight to the death, unless
+                        they&apos;re able to steal a corpse (friend or foe) and
+                        escape with it.
+                      </p>
+                      <p>
+                        The eagles will fly down and attack, then fly back up.
+                        If an eagle triggers an AoO from a PC, the griffons or
+                        bat will also fly down and attack that foe.
+                      </p>
+                      <p>
+                        Otherwise, the creatures will always attack the weakest
+                        looking target.
+                      </p>
+                    </>
+                  ),
+                }}
+              />
+            </div>
+            <div className="col-span-6">
+              <Encounter
+                encounterData={{
+                  name: "The Traveller",
+                  enemies: [
+                    { monster: monsters.doppleganger, count: 1 },
+                    { monster: monsters.chimera, count: 1 },
+                  ],
+                  tactics: (
+                    <>
+                      <p>
+                        The chimera will defend the traveller at all costs,
+                        including fighting to the death or dying to allow him to
+                        escape.
+                      </p>
+                      <p>
+                        The traveller will not participate in the fight unless
+                        attacked directly. He will instead continue preparing
+                        his ship to depart.
+                      </p>
+                    </>
+                  ),
+                }}
+              />
+            </div>
+            <div className="col-span-6">
+              <Encounter
+                encounterData={{
+                  name: "Random Encounters",
+                  enemies: [
+                    { monster: monsters.goat, count: 1 },
+                    { monster: monsters.basilisk, count: 1 },
+                    { monster: monsters.polarbear, count: 1 },
+                    { monster: monsters.griffon, count: 1 },
+                    { monster: monsters.owlbear, count: 1 },
+                    { monster: monsters.yeti, count: 1 },
+                    { monster: monsters.wereboar, count: 1 },
+                  ],
+                  tactics: (
+                    <>
+                      <p>
+                        The temple is infested with packs of roaming beasts.
+                        While travelling in the temple, entering any hallway
+                        should trigger a roll on the random encounter table. If
+                        the PCs attempt to long rest anywhere inside the temple,
+                        their sleep is interrupted by beasts from the table.
+                        Short resting triggers a roll.{" "}
+                      </p>
+                      <table className="table-auto w-full mt-4 border border-collapse border-steel-500">
+                        <thead className="text-white bg-steel">
+                          <td>
+                            <p className="p-4">d10</p>
+                          </td>
+                          <td>Encounter</td>
+                        </thead>
+                        <tbody>
+                          <tr className="border">
+                            <td>
+                              <p className="p-4">1</p>
+                            </td>
+                            <td>Goat x 3, Basilisk</td>
+                          </tr>
+                          <tr className="border">
+                            <td>
+                              <p className="p-4">2-3</p>
+                            </td>
+                            <td>Polar bear x 2</td>
+                          </tr>
+                          <tr className="border">
+                            <td>
+                              <p className="p-4">4-5</p>
+                            </td>
+                            <td>Griffon</td>
+                          </tr>
+                          <tr className="border">
+                            <td>
+                              <p className="p-4">6-7</p>
+                            </td>
+                            <td>Yeti</td>
+                          </tr>
+                          <tr className="border">
+                            <td>
+                              <p className="p-4">7-8</p>
+                            </td>
+                            <td>Owlbear</td>
+                          </tr>
+                          <tr className="border">
+                            <td>
+                              <p className="p-4">9-10</p>
+                            </td>
+                            <td>Wereboar</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </>
+                  ),
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
