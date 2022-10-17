@@ -16,15 +16,15 @@ export const Encounter = ({
   className?: string;
 }) => {
   return (
-    <aside className={`p-4 bg-white ${className}`}>
+    <aside className={`my-4 p-4 bg-white ${className}`}>
       <header className="flex items-center mb-4 justify-between">
-        <h2 className="text-2xl text-blood-red font-bold mr-2">Encounter</h2>
-        <span className="text-3xl text-steel-500">{encounterData.name}</span>
+        <h2 className="text-xl text-blood-red font-bold mr-2">Encounter</h2>
+        <span className="text-2xl text-steel-500">{encounterData.name}</span>
       </header>
-      <div className="flex gap-4 justify-between">
-        <div>
-          <h3 className="text-blood-red font-bold text-xl">Enemies</h3>
-          <ul>
+      <div className="sm:flex gap-4 justify-between">
+        <div className="mb-4 sm:mb-0">
+          <h3 className="text-blood-red font-bold text-lg">Enemies</h3>
+          <ul className="text-sm">
             {encounterData.enemies.map((enemy) => {
               return (
                 <li
@@ -40,8 +40,8 @@ export const Encounter = ({
           </ul>
         </div>
         <div>
-          <h3 className="text-blood-red font-bold text-xl">Tactics</h3>
-          <div className="indent-2 text-sm max-w-lg p-2">
+          <h3 className="text-blood-red font-bold text-lg">Tactics</h3>
+          <div className="indent-2 text-sm max-w-lg py-2">
             {encounterData.tactics}
           </div>
         </div>
@@ -49,9 +49,9 @@ export const Encounter = ({
       <div className="mt-4">
         {encounterData.enemies.map((enemy) => {
           return (
-            <p key={enemy.monster.name} className="py-2">
+            <div key={enemy.monster.name} className="py-2">
               <MonsterStatBlock monsterData={enemy.monster} />
-            </p>
+            </div>
           );
         })}
       </div>

@@ -33,14 +33,14 @@ export const MonsterStatBlock = ({
       </header>
       {isOpen && (
         <>
-          <div className="flex justify-between p-4 gap-8">
+          <div className="md:flex justify-between p-4 gap-8">
             <div>
-              <ul>
-                <li className="flex gap-4 justify-between mb-1">
+              <ul className="mb-4 md:mb-auto">
+                <li className="flex gap-4 justify-between mb-2">
                   <span className="font-bold">AC</span>
                   <span>{monsterData.ac}</span>
                 </li>
-                <li className="flex gap-4 justify-between mb-1">
+                <li className="flex gap-4 justify-between mb-2">
                   <span className="font-bold whitespace-nowrap">
                     Hit Points
                   </span>
@@ -48,7 +48,7 @@ export const MonsterStatBlock = ({
                     {monsterData.hp.total} ({monsterData.hp.die})
                   </span>
                 </li>
-                <li className="flex gap-4 justify-between mb-1">
+                <li className="flex gap-4 justify-between mb-2">
                   <span className="font-bold">Speed</span>
                   <span className="text-right">{monsterData.speed}</span>
                 </li>
@@ -62,7 +62,7 @@ export const MonsterStatBlock = ({
             </div>
             <div>
               <div>
-                <ul className="flex gap-8 mb-4">
+                <ul className="flex gap-8 mb-4 flex-wrap justify-center">
                   <li className="text-center">
                     <span className="font-bold">STR</span>
                     <div>
@@ -110,7 +110,7 @@ export const MonsterStatBlock = ({
               <div className="mb-4">
                 <ul>
                   {monsterData.damageResistances && (
-                    <li className="flex gap-4 justify-between mb-1">
+                    <li className="flex flex-wrap gap-4 justify-between mb-1">
                       <span className="font-bold">Damage Resistances</span>
                       <span className="text-right">
                         {monsterData.damageResistances.join(", ")}
@@ -172,7 +172,10 @@ export const MonsterStatBlock = ({
             <div className="mt-4 p-4">
               <ul>
                 {monsterData.features?.map((feature) => (
-                  <li key={feature.name} className="flex gap-4 mb-2">
+                  <li
+                    key={feature.name}
+                    className="flex flex-wrap sm:flex-nowrap gap-4 mb-2"
+                  >
                     <span className="font-bold whitespace-nowrap">
                       {feature.name}
                     </span>{" "}

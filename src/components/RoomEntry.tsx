@@ -3,8 +3,8 @@ import { RoomData } from "../../content/rooms";
 
 export const RoomEntry = ({ roomData }: { roomData: RoomData }) => {
   return (
-    <div className="room-entry">
-      <h3 className="text-xl text-blood-red font-bold mb-1 flex items-center gap-2">
+    <div className="my-8">
+      <h3 className="text-xl text-blood-red font-bold mb-2 flex items-center gap-2">
         <span className="font-bold text-black">
           {roomData.area}
           {roomData.roomNumber}
@@ -12,7 +12,7 @@ export const RoomEntry = ({ roomData }: { roomData: RoomData }) => {
         <span>{roomData.roomName}</span>
       </h3>
       {roomData.preReadAloudText && (
-        <div className="bg-steel text-white rounded p-4 font-light mb-2 text-sm indent-2">
+        <div className="bg-steel text-white rounded p-4 font-light mb-4 text-sm indent-2">
           {roomData.preReadAloudText}
         </div>
       )}
@@ -20,7 +20,7 @@ export const RoomEntry = ({ roomData }: { roomData: RoomData }) => {
         {roomData.mainText}
       </div>
       {roomData.postReadAloudText && (
-        <div className="bg-steel text-white rounded p-4 font-light mb-2 text-sm indent-2">
+        <div className="bg-steel text-white rounded p-4 font-light mt-4 text-sm indent-2">
           {roomData.postReadAloudText}
         </div>
       )}

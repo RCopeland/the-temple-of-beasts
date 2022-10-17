@@ -1244,68 +1244,82 @@ export const monsters = {
     ],
   },
   wereboar: {
-    name: "Killer Whale",
-    meta: "huge beast, unaligned",
-    ac: "12",
+    name: "Wereboar",
+    meta: "medium humanoid (human, shapechanger), neutral evil",
+    ac: "10",
     abilityScores: {
       str: {
-        score: "19",
-        modifier: "+4",
+        score: "17",
+        modifier: "+3",
       },
       dex: {
         score: "10",
         modifier: "+0",
       },
       con: {
-        score: "13",
-        modifier: "+1",
+        score: "15",
+        modifier: "+2",
       },
       int: {
-        score: "3",
-        modifier: "-4",
+        score: "10",
+        modifier: "+0",
       },
       wis: {
-        score: "12",
-        modifier: "+1",
+        score: "11",
+        modifier: "+0",
       },
       cha: {
-        score: "7",
-        modifier: "-2",
+        score: "8",
+        modifier: "-1",
       },
     },
     hp: {
-      total: "90",
-      die: "12d12+12",
+      total: "78",
+      die: "12d8+24",
     },
-    speed: "swim 60ft.",
+    speed: "30ft. (40ft. in boar form)",
     cr: {
-      rating: "3",
-      xp: "700",
+      rating: "4",
+      xp: "1100",
     },
-    skills: ["Perception + 3"],
-    senses: ["blindsight 120ft.", "passive Perception 13"],
-    languages: [],
+    skills: ["Perception + 2"],
+    damageImmunities: [
+      "bludgeoning, piercing and slashing from nonmagical attacks not made with silvered weapons",
+    ],
+    senses: ["passive Perception 12"],
+    languages: ["Common (Can't speak in boar form"],
     features: [
       {
-        name: "Echolocation",
-        description: "The whale can't use its blindsight while deafened.",
+        name: "Shapechanger",
+        description:
+          "The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
       },
       {
-        name: "Hold Breath",
+        name: "Charge",
         description:
-          "While out of water, the whale can hold its breath for 30 minutes.",
+          "If the wereboar moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.",
       },
       {
-        name: "Keen Hearing",
+        name: "Relentless",
         description:
-          "The whale has advantage on Wisdom (Perception) checks that rely on hearing",
+          "If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.",
       },
     ],
     actions: [
       {
-        name: "Bite",
+        name: "Multiattack (Humanoid or Hybrid Form Only)",
         description:
-          "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: (5d6 + 4) piercing damage.",
+          "The wereboar makes two attacks, only one of which can be with its tusks.",
+      },
+      {
+        name: "Maul (Humanoid or Hybrid Form Only)",
+        description:
+          "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (2d6 + 3) bludgeoning damage.",
+      },
+      {
+        name: "Tusks (Boar or Hybrid Form Only)",
+        description:
+          "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (2d6 + 3) slashing damage. If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with wereboar lycanthropy.",
       },
     ],
   },

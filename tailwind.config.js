@@ -22,9 +22,12 @@ module.exports = {
       fontWeight: {
         light: 300,
       },
-    },
-    screens: {
-      desktop: "1420px",
+      gridTemplateColumns: {
+        autoFill: "repeat(auto-fill, 400px)",
+      },
+      screens: {
+        desktop: "1420px",
+      },
     },
   },
   plugins: [],
