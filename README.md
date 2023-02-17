@@ -5,7 +5,7 @@ I haven't been able to run it yet, but will update when I do.
 
 I built it with Gatsby and did the layout with CSS Grid.
 
-![screenshot of temple site](https://github.com/rcopeland/the-temple-of-beasts/blob/mainlie/screenshot.jpeg?raw=true)
+![screenshot of temple site](https://github.com/rcopeland/the-temple-of-beasts/blob/mainline/screenshot.jpeg?raw=true)
 
 ## Adventure
 
