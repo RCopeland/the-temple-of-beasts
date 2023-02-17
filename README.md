@@ -59,9 +59,3 @@ If the relics are reunited, the creator is summoned, collects them both, and dis
   - the traveller will decide he has enough information and depart
   - the knights will return to their original army 
   - the temple will be abandoned and later infested by spiders
-
-# TODO
-- npcs for the knights, the prisoners, the traveller, few of the beasts
-- room descriptions
-- map
-- treasure
